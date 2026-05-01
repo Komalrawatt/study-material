@@ -1,0 +1,141 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function userDoc(uid) {
+      return get(/databases/$(database)/documents/users/$(uid));
+    }
+
+    function userRole() {
+      return isSignedIn() && userDoc(request.auth.uid).exists()
+        ? userDoc(request.auth.uid).data.role
+        : null;
+    }
+
+    function isAdmin() {
+      return userRole() == 'admin';
+    }
+
+    function isEducator() {
+      return userRole() == 'educator';
+    }
+
+    function isAdminOrEducator() {
+      return isAdmin() || isEducator();
+    }
+
+    function isCourseOwner(courseData) {
+      return isSignedIn() && (
+        courseData.createdBy == request.auth.uid ||
+        courseData.educatorId == request.auth.uid
+      );
+    }
+
+    function canManageCourseDoc(courseData) {
+      return isAdmin() || isCourseOwner(courseData);
+    }
+
+    function validEnrollmentUpdate() {
+      let changed = request.resource.data.diff(resource.data).changedKeys();
+
+      let enrollFlow =
+        !resource.data.studentIds.hasAny([request.auth.uid]) &&
+        request.resource.data.studentIds.hasAll(resource.data.studentIds) &&
+        request.resource.data.studentIds.hasAny([request.auth.uid]) &&
+        request.resource.data.enrolledCount == resource.data.enrolledCount + 1;
+
+      let unenrollFlow =
+        resource.data.studentIds.hasAny([request.auth.uid]) &&
+        resource.data.studentIds.hasAll(request.resource.data.studentIds) &&
+        !request.resource.data.studentIds.hasAny([request.auth.uid]) &&
+        request.resource.data.enrolledCount == resource.data.enrolledCount - 1;
+
+      return isSignedIn() &&
+        !isEducator() &&
+        changed.hasOnly(['studentIds', 'enrolledCount', 'updatedAt']) &&
+        (enrollFlow || unenrollFlow);
+    }
+
+    function canUpdateOwnProfile(userId) {
+      let changed = request.resource.data.diff(resource.data).changedKeys();
+      return isSignedIn() && request.auth.uid == userId && (
+        !isEducator() || !changed.hasAny(['enrolledCourses'])
+      );
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn() && request.auth.uid == userId;
+      allow update, delete: if canUpdateOwnProfile(userId);
+    }
+
+    // Courses collection
+    match /courses/{courseId} {
+      allow read: if true;
+
+      // Admin or educator can create courses. Educator must create own course.
+      allow create: if isAdmin() || (
+        isEducator() && (
+          request.resource.data.createdBy == request.auth.uid ||
+          request.resource.data.educatorId == request.auth.uid
+        )
+      );
+
+      // Admin/owner can fully update/delete, students can do strict enrollment update only.
+      allow update: if canManageCourseDoc(resource.data) || validEnrollmentUpdate();
+      allow delete: if canManageCourseDoc(resource.data);
+    }
+
+    // Materials collection
+    match /materials/{materialId} {
+      allow read: if true;
+
+      // Must belong to one course and creator must be admin or educator owner of that course.
+      allow create: if isSignedIn() &&
+        request.resource.data.courseId is string &&
+        exists(/databases/$(database)/documents/courses/$(request.resource.data.courseId)) && (
+          isAdmin() || (
+            isEducator() &&
+            canManageCourseDoc(get(/databases/$(database)/documents/courses/$(request.resource.data.courseId)).data)
+          )
+        );
+
+      allow update, delete: if isAdmin() || (
+        isEducator() &&
+        (resource.data.uploadedBy == request.auth.uid || resource.data.educatorId == request.auth.uid)
+      );
+    }
+
+    // Reviews collection
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+
+    // Mock Tests collection
+    match /mockTests/{testId} {
+      allow read: if true;
+      allow write: if isAdminOrEducator();
+    }
+
+    // Questions collection
+    match /questions/{questionId} {
+      allow read: if isSignedIn();
+      allow write: if isAdminOrEducator();
+    }
+
+    // Results collection
+    match /results/{resultId} {
+      allow read: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+  }
+}
