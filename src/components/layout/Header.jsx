@@ -8,7 +8,6 @@ import {
   Sun,
   Menu,
   GraduationCap,
-  Search,
   X,
   Presentation,
 } from "lucide-react";
@@ -21,8 +20,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { toggleTheme, toggleSidebar, setSearchQuery } from "@/store/slices/uiSlice";
+import { toggleTheme, toggleSidebar } from "@/store/slices/uiSlice";
 import { logoutUser } from "@/store/slices/authSlice";
 import { getInitials } from "@/utils/helpers";
 
@@ -38,7 +36,7 @@ export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
   const { user, isAuthenticated } = useSelector((state) => state.auth);
-  const { theme, searchQuery } = useSelector((state) => state.ui);
+  const { theme } = useSelector((state) => state.ui);
 
   const handleLogout = () => {
     dispatch(logoutUser());
@@ -97,26 +95,6 @@ export default function Header() {
 
           {/* Right side */}
           <div className="flex items-center gap-2">
-            {/* Search - Desktop */}
-            <div className="hidden lg:flex relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-              <Input
-                placeholder="Search courses..."
-                value={searchQuery}
-                onChange={(e) => dispatch(setSearchQuery(e.target.value))}
-                onKeyDown={(e) => { if (e.key === "Enter" && searchQuery.trim()) navigate("/courses"); }}
-                className="pl-9 w-56 h-9 bg-muted/50 border-border/50 focus:border-emerald-500/50 transition-all focus:w-72"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => dispatch(setSearchQuery(""))}
-                  className="absolute right-3 top-1/2 -translate-y-1/2"
-                >
-                  <X className="w-3 h-3 text-muted-foreground hover:text-foreground" />
-                </button>
-              )}
-            </div>
-
             {/* Theme Toggle */}
             <Button
               variant="ghost"

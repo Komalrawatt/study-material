@@ -11,7 +11,7 @@ import {
   deleteUser,
   sendEmailVerification,
 } from "firebase/auth";
-import { doc, setDoc, getDoc, updateDoc, serverTimestamp } from "firebase/firestore";
+import { doc, setDoc, getDoc, updateDoc, deleteDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "./firebase";
 
 const googleProvider = new GoogleAuthProvider();
@@ -120,7 +120,7 @@ export const deleteUserAccount = async () => {
   if (user) {
     // Delete Firestore profile first
     const userRef = doc(db, "users", user.uid);
-    await updateDoc(userRef, { deleted: true });
+    await deleteDoc(userRef);
     await deleteUser(user);
   }
 };

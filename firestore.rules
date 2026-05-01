@@ -72,7 +72,8 @@ service cloud.firestore {
     match /users/{userId} {
       allow read: if isSignedIn();
       allow create: if isSignedIn() && request.auth.uid == userId;
-      allow update, delete: if canUpdateOwnProfile(userId);
+      allow update: if canUpdateOwnProfile(userId);
+      allow delete: if isSignedIn() && request.auth.uid == userId;
     }
 
     // Courses collection
