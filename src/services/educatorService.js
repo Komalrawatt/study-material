@@ -58,7 +58,7 @@ const getMaterialBucket = ({ type, fileFormat }) => {
   if (normalizedType === "video") return "videos";
   if (normalizedType === "question bank") return "questionBanks";
   if (normalizedType === "lab manual") return "labManuals";
-  if (normalizedType.includes("audio") || ["mp3", "wav", "m4a", "aac", "ogg"].includes(normalizedFormat)) return "audioLectures";
+  if (normalizedType === "previous paper") return "previousPapers";
   if (normalizedFormat === "pdf") return "pdfs";
   return "notes";
 };

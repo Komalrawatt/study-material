@@ -86,47 +86,48 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482718/DSA_Unit_1_Notes_uepbsh.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482706/Comprehensive_DSA_Notes_Typed_mhsoqq.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781155733/introductin_to_data_structures_vguknr.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486859/DSA_Question_Bank_txp9pj.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081194/dsa_frequent_exam_papers_a3ajiu.pdf"
         }
       },
       {
         unitNumber: 2,
-        title: "Linked Lists",
+        title: "Sorting & Searching",
+        description: "QuickSort, MergeSort, Binary Search",
+        items: {
+          notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482740/DSA_Unit_5_Notes_nmxufu.pdf",
+          PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482706/Comprehensive_DSA_Notes_Typed_mhsoqq.pdf",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781156816/explain_the_overview_of_sortin_nnmm5o.mp4",
+          questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486859/DSA_Question_Bank_txp9pj.pdf",
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081194/dsa_frequent_exam_papers_a3ajiu.pdf"
+        }
+      },
+      {
+        unitNumber: 3,
+        title: "Arrays & Linked Lists",
         description: "Singly, doubly, circular linked lists",
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482722/DSA_Unit_2_Notes_ntb9lq.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482706/Comprehensive_DSA_Notes_Typed_mhsoqq.pdf",
           videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486859/DSA_Question_Bank_txp9pj.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081194/dsa_frequent_exam_papers_a3ajiu.pdf"
         }
       },
       {
-        unitNumber: 3,
+        unitNumber: 4,
         title: "Trees & Graphs",
         description: "BST, AVL, BFS, DFS",
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482736/DSA_Unit_4_Notes_zwwuma.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482706/Comprehensive_DSA_Notes_Typed_mhsoqq.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781156057/explain_the_overview_of_graph_p5usu5.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486859/DSA_Question_Bank_txp9pj.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081194/dsa_frequent_exam_papers_a3ajiu.pdf"
         }
       },
-      {
-        unitNumber: 4,
-        title: "Sorting & Searching",
-        description: "QuickSort, MergeSort, Binary Search",
-        items: {
-          notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482740/DSA_Unit_5_Notes_nmxufu.pdf",
-          PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482706/Comprehensive_DSA_Notes_Typed_mhsoqq.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4",
-          questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486859/DSA_Question_Bank_txp9pj.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4"
-        }
-      },
+      
       {
         unitNumber: 5,
         title: "Dynamic Programming",
@@ -134,9 +135,9 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482743/DSA_Unit_6_Notes_oqwbow.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482706/Comprehensive_DSA_Notes_Typed_mhsoqq.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781157073/explain_the_oveview_of_Dynamic_tgw9l2.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486859/DSA_Question_Bank_txp9pj.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dsa_video_csscoh.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081194/dsa_frequent_exam_papers_a3ajiu.pdf"
         }
       }
     ],
@@ -158,9 +159,9 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483534/web_development_brief_notes_eiagmg.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483097/web_dev_notes_gghl1v.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781161534/explain_the_oveview_of_HTML_fu_gioneo.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481744/web_dev_question_bank_ra4wgd.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081282/web_development_fundamentals_frequent_papers_gtqngo.pdf"
         }
       },
       {
@@ -170,9 +171,9 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483534/web_development_brief_notes_eiagmg.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781161555/explain_the_oveview_of_CSS_and_x3z5cm.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481744/web_dev_question_bank_ra4wgd.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081282/web_development_fundamentals_frequent_papers_gtqngo.pdf"
         }
       },
       {
@@ -182,9 +183,9 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483534/web_development_brief_notes_eiagmg.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483097/web_dev_notes_gghl1v.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781161579/js_basics_gdaeem.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481744/web_dev_question_bank_ra4wgd.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081282/web_development_fundamentals_frequent_papers_gtqngo.pdf"
 
         }
       },
@@ -195,9 +196,9 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483534/web_development_brief_notes_eiagmg.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483097/web_dev_notes_gghl1v.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781161603/explain_the_oveview_of_advance_k8cmmg.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481744/web_dev_question_bank_ra4wgd.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081282/web_development_fundamentals_frequent_papers_gtqngo.pdf"
         }
       },
       {
@@ -207,9 +208,9 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483534/web_development_brief_notes_eiagmg.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483097/web_dev_notes_gghl1v.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781161617/explain_the_oveview_of_react_c_bekbps.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481744/web_dev_question_bank_ra4wgd.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485374/web_dev_gr88ke.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081282/web_development_fundamentals_frequent_papers_gtqngo.pdf"
         }
       }
 
@@ -231,10 +232,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777483775/engineering_mathematics_description_o80tjm.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781162997/unit_1_pw6ule.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
           labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486282/Engineering_Mathematics_Lab_Manual_g4tmwe.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081345/Engineering_Mathematics_Top_20_PYQs_c9wuux.pdf"
         }
       },
       {
@@ -244,10 +245,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781163104/unit_2_qjpf1y.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
           labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486282/Engineering_Mathematics_Lab_Manual_g4tmwe.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081345/Engineering_Mathematics_Top_20_PYQs_c9wuux.pdf"
 
         }
       },
@@ -258,10 +259,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781163116/unit_3_lenfbu.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
           labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486282/Engineering_Mathematics_Lab_Manual_g4tmwe.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081345/Engineering_Mathematics_Top_20_PYQs_c9wuux.pdf"
 
         }
       },
@@ -272,10 +273,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781163134/unit_4_t2au6k.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
           labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486282/Engineering_Mathematics_Lab_Manual_g4tmwe.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081345/Engineering_Mathematics_Top_20_PYQs_c9wuux.pdf"
 
         }
       },
@@ -286,10 +287,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781163150/unit_5_jd4zyi.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
           labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486282/Engineering_Mathematics_Lab_Manual_g4tmwe.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/image/upload/v1777485373/enginnering_mathematics_bkrigv.jpg"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081345/Engineering_Mathematics_Top_20_PYQs_c9wuux.pdf"
 
         }
       }
@@ -312,10 +313,10 @@ export const DEMO_COURSES = [
           items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777487528/digital_electronics_complete_notes_sxpp4s.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781172804/u_1_jdnt34.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486484/Detailed_Digital_Electronics_Lab_Manual_hdldyw.pdf",
-            audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+            previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081413/Digital_Electronics_Top_20_PYQs_ehfu7k.pdf"
 
           }
         },
@@ -326,10 +327,10 @@ export const DEMO_COURSES = [
           items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777487528/digital_electronics_complete_notes_sxpp4s.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781172803/u_2_j3brjm.mp4",
             questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486484/Detailed_Digital_Electronics_Lab_Manual_hdldyw.pdf",
-            audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+            previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081413/Digital_Electronics_Top_20_PYQs_ehfu7k.pdf"
           }
         },
   
@@ -340,10 +341,10 @@ export const DEMO_COURSES = [
     items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777487528/digital_electronics_complete_notes_sxpp4s.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781172803/u_3_ouzzwc.mp4",
       questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486484/Detailed_Digital_Electronics_Lab_Manual_hdldyw.pdf",
-      audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+      previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081413/Digital_Electronics_Top_20_PYQs_ehfu7k.pdf"
 
     }
   },
@@ -354,10 +355,10 @@ export const DEMO_COURSES = [
     items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777487528/digital_electronics_complete_notes_sxpp4s.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781202353/u_4_gawez4.mp4",
       questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486484/Detailed_Digital_Electronics_Lab_Manual_hdldyw.pdf",
-      audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+      previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081413/Digital_Electronics_Top_20_PYQs_ehfu7k.pdf"
     }
   },
 
@@ -368,10 +369,10 @@ export const DEMO_COURSES = [
     items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777487528/digital_electronics_complete_notes_sxpp4s.pdf",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781202376/u_5_gxxpys.mp4",
       questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486484/Detailed_Digital_Electronics_Lab_Manual_hdldyw.pdf",
-      audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+      previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081413/Digital_Electronics_Top_20_PYQs_ehfu7k.pdf"
 
     }
   },
@@ -393,10 +394,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781172804/u_1_jdnt34.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486669/Engineering_Physics_Lab_Manual_ktluje.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081469/Physics_for_Engineers_Top_20_PYQs_txdo1t.pdf"
 
         }
       },
@@ -407,10 +408,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781172803/u_2_j3brjm.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486669/Engineering_Physics_Lab_Manual_ktluje.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081469/Physics_for_Engineers_Top_20_PYQs_txdo1t.pdf"
         }
       },
       {
@@ -420,10 +421,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781172803/u_3_ouzzwc.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486669/Engineering_Physics_Lab_Manual_ktluje.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081469/Physics_for_Engineers_Top_20_PYQs_txdo1t.pdf"
         }
       },
       {
@@ -433,10 +434,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781202353/u_4_gawez4.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486669/Engineering_Physics_Lab_Manual_ktluje.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081469/Physics_for_Engineers_Top_20_PYQs_txdo1t.pdf"
 
         }
       },
@@ -447,10 +448,10 @@ export const DEMO_COURSES = [
         items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777481898/engineering_maths_notes_sbxsdf.pdf",
           PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777142649/Screenshot_2026-04-26_001353_y2hzfu.png",
-          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4",
+          videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781202376/u_5_gxxpys.mp4",
           questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482367/eg_question_bank_l2wdna.pdf",
             labManuals: "https://res.cloudinary.com/dwotpk840/image/upload/v1777486669/Engineering_Physics_Lab_Manual_ktluje.pdf",
-          audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485374/digital_physics_e9zxge.mp4"
+          previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081469/Physics_for_Engineers_Top_20_PYQs_txdo1t.pdf"
 
         }
       }
@@ -473,9 +474,9 @@ export const DEMO_COURSES = [
           items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
               PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
-            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4",
+            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781203146/u_1_drowey.mp4",
             questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482167/DBMS_Question_Bank_40_iilqnp.pdf",
-            audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4"
+            previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081532/DBMS_Top_20_Frequent_PYQs_yrbrc0.pdf"
 
           }
         },
@@ -486,9 +487,9 @@ export const DEMO_COURSES = [
           items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
-            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4",
+            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781203463/u_2_girvek.mp4",
             questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482167/DBMS_Question_Bank_40_iilqnp.pdf",
-            audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4"
+            previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081532/DBMS_Top_20_Frequent_PYQs_yrbrc0.pdf"
 
           }
         },
@@ -499,9 +500,9 @@ export const DEMO_COURSES = [
           items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
-            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4",
+            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781203824/u_3_yysc7j.mp4",
             questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482167/DBMS_Question_Bank_40_iilqnp.pdf",
-            audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4"
+            previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081532/DBMS_Top_20_Frequent_PYQs_yrbrc0.pdf"
 
           }
         },
@@ -512,9 +513,9 @@ export const DEMO_COURSES = [
           items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
-            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4",
+            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781204510/u_4_acbpng.mp4",
             questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482167/DBMS_Question_Bank_40_iilqnp.pdf",
-            audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4"
+            previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081532/DBMS_Top_20_Frequent_PYQs_yrbrc0.pdf"
 
           }
         },
@@ -525,9 +526,9 @@ export const DEMO_COURSES = [
           items: {
           notes: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
             PDFs: "https://res.cloudinary.com/dwotpk840/image/upload/v1777484090/dbms_complete_notes_uwkofc.pdf",
-            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4",
+            videos: "https://res.cloudinary.com/dwotpk840/video/upload/v1781204352/u_5_r0vf4n.mp4",
             questionBanks: "https://res.cloudinary.com/dwotpk840/image/upload/v1777482167/DBMS_Question_Bank_40_iilqnp.pdf",
-            audioLectures: "https://res.cloudinary.com/dwotpk840/video/upload/v1777485372/dbms_video_qjxpbt.mp4"
+            previousPapers: "https://res.cloudinary.com/dwotpk840/image/upload/v1781081532/DBMS_Top_20_Frequent_PYQs_yrbrc0.pdf"
 
           }
         }
@@ -581,7 +582,25 @@ export const DEMO_TESTS = [
     duration: 45,
     totalQuestions: 10,
     difficulty: "hard",
-  }
+  },
+  {
+    id: "test-6",
+    courseId: "demo-6",
+    title: "Aptitude Practice Test",
+    description: "Aptitude test covering quantitative aptitude, logical reasoning, data interpretation, percentages, profit and loss, time and work, and analytical thinking",
+    duration: 10,
+    totalQuestions: 10,
+    difficulty: "medium",
+},
+{
+    id: "test-7",
+    courseId: "demo-7",
+    title: "Quantitative Aptitude Final Mock",
+    description: "Comprehensive test covering percentages, profit and loss, time and work, speed and distance, ratios and proportions, averages, simple and compound interest, number systems, algebra, and data interpretation",
+    duration: 20,
+    totalQuestions: 10,
+    difficulty: "hard",
+}
 ];
 
 export const DEMO_QUESTIONS = {
@@ -662,51 +681,210 @@ export const DEMO_QUESTIONS = {
     { id: "q49", testId: "test-5", questionText: "Which particle has negative charge?", options: ["Proton", "Neutron", "Electron", "Alpha"], correctAnswer: 2, explanation: "Electron carries negative charge.", order: 9 },
 
     { id: "q50", testId: "test-5", questionText: "What is unit of power?", options: ["Joule", "Newton", "Watt", "Volt"], correctAnswer: 2, explanation: "Power is measured in Watt.", order: 10 }
-  ]
+  ],
+ "test-6": [
+  {
+    id: "q51",
+    testId: "test-5",
+    questionText: "A train travels 120 km in 2 hours. What is its speed?",
+    options: ["50 km/h", "60 km/h", "70 km/h", "80 km/h"],
+    correctAnswer: 1,
+    explanation: "Speed = Distance ÷ Time = 120 ÷ 2 = 60 km/h.",
+    order: 1
+  },
+
+  {
+    id: "q52",
+    testId: "test-5",
+    questionText: "What is 25% of 200?",
+    options: ["25", "40", "50", "75"],
+    correctAnswer: 2,
+    explanation: "25% of 200 = (25/100) × 200 = 50.",
+    order: 2
+  },
+
+  {
+    id: "q53",
+    testId: "test-5",
+    questionText: "If the ratio of boys to girls is 3:2 and there are 30 boys, how many girls are there?",
+    options: ["15", "20", "25", "30"],
+    correctAnswer: 1,
+    explanation: "3 parts = 30, so 1 part = 10. Girls = 2 × 10 = 20.",
+    order: 3
+  },
+
+  {
+    id: "q54",
+    testId: "test-5",
+    questionText: "A shopkeeper gives a 10% discount on a ₹500 item. What is the selling price?",
+    options: ["₹450", "₹400", "₹475", "₹425"],
+    correctAnswer: 0,
+    explanation: "Discount = 10% of 500 = ₹50. Selling price = ₹500 - ₹50 = ₹450.",
+    order: 4
+  },
+
+  {
+    id: "q55",
+    testId: "test-5",
+    questionText: "Find the next number in the series: 2, 4, 8, 16, ?",
+    options: ["20", "24", "32", "64"],
+    correctAnswer: 2,
+    explanation: "Each number is multiplied by 2. 16 × 2 = 32.",
+    order: 5
+  },
+
+  {
+    id: "q56",
+    testId: "test-5",
+    questionText: "If 5 workers can complete a task in 12 days, how many days will 10 workers take?",
+    options: ["4", "5", "6", "8"],
+    correctAnswer: 2,
+    explanation: "Workers and days are inversely proportional. (5 × 12) ÷ 10 = 6 days.",
+    order: 6
+  },
+
+  {
+    id: "q57",
+    testId: "test-5",
+    questionText: "Which number is the odd one out?",
+    options: ["9", "16", "25", "27"],
+    correctAnswer: 3,
+    explanation: "9, 16, and 25 are perfect squares, while 27 is not.",
+    order: 7
+  },
+
+  {
+    id: "q58",
+    testId: "test-5",
+    questionText: "A sum of money doubles in 5 years at simple interest. In how many years will it become triple?",
+    options: ["10", "12.5", "15", "20"],
+    correctAnswer: 0,
+    explanation: "If it doubles in 5 years, interest equals principal in 5 years. To become triple, interest must be twice the principal, requiring 10 years.",
+    order: 8
+  },
+
+  {
+    id: "q59",
+    testId: "test-5",
+    questionText: "Find the missing number: 3, 6, 12, 24, ?",
+    options: ["36", "42", "48", "60"],
+    correctAnswer: 2,
+    explanation: "Each number is multiplied by 2. 24 × 2 = 48.",
+    order: 9
+  },
+
+  {
+    id: "q60",
+    testId: "test-5",
+    questionText: "If the probability of an event is 0.25, what is the probability that it will not occur?",
+    options: ["0.25", "0.50", "0.75", "1.25"],
+    correctAnswer: 2,
+    explanation: "Probability of not occurring = 1 - 0.25 = 0.75.",
+    order: 10
+  }
+],
+"test-7": [
+  {
+    id: "q51",
+    testId: "test-7",
+    questionText: "What is 20% of 250?",
+    options: ["40", "50", "60", "70"],
+    correctAnswer: 1,
+    explanation: "20% of 250 = (20/100) × 250 = 50.",
+    order: 1
+  },
+
+  {
+    id: "q52",
+    testId: "test-7",
+    questionText: "A train travels 180 km in 3 hours. What is its speed?",
+    options: ["50 km/h", "55 km/h", "60 km/h", "65 km/h"],
+    correctAnswer: 2,
+    explanation: "Speed = Distance ÷ Time = 180 ÷ 3 = 60 km/h.",
+    order: 2
+  },
+
+  {
+    id: "q53",
+    testId: "test-7",
+    questionText: "The ratio of boys to girls in a class is 4:3. If there are 24 boys, how many girls are there?",
+    options: ["16", "18", "20", "22"],
+    correctAnswer: 1,
+    explanation: "4 parts = 24, so 1 part = 6. Girls = 3 × 6 = 18.",
+    order: 3
+  },
+
+  {
+    id: "q54",
+    testId: "test-7",
+    questionText: "A shopkeeper gives a 15% discount on a ₹800 item. What is the selling price?",
+    options: ["₹680", "₹700", "₹720", "₹740"],
+    correctAnswer: 0,
+    explanation: "Discount = 15% of 800 = ₹120. Selling Price = ₹800 - ₹120 = ₹680.",
+    order: 4
+  },
+
+  {
+    id: "q55",
+    testId: "test-7",
+    questionText: "Find the next number in the series: 5, 10, 20, 40, ?",
+    options: ["60", "70", "80", "90"],
+    correctAnswer: 2,
+    explanation: "Each term is multiplied by 2. 40 × 2 = 80.",
+    order: 5
+  },
+
+  {
+    id: "q56",
+    testId: "test-7",
+    questionText: "If 8 workers can complete a task in 15 days, how many days will 12 workers take?",
+    options: ["8", "10", "12", "14"],
+    correctAnswer: 1,
+    explanation: "(8 × 15) ÷ 12 = 10 days.",
+    order: 6
+  },
+
+  {
+    id: "q57",
+    testId: "test-7",
+    questionText: "The average of 12, 18, 24, and 30 is:",
+    options: ["18", "20", "21", "22"],
+    correctAnswer: 2,
+    explanation: "(12 + 18 + 24 + 30) ÷ 4 = 84 ÷ 4 = 21.",
+    order: 7
+  },
+
+  {
+    id: "q58",
+    testId: "test-7",
+    questionText: "A sum becomes ₹1200 after 2 years at 10% simple interest. What was the principal?",
+    options: ["₹1000", "₹1050", "₹1100", "₹1150"],
+    correctAnswer: 0,
+    explanation: "SI = (1000 × 10 × 2)/100 = ₹200. Amount = ₹1200.",
+    order: 8
+  },
+
+  {
+    id: "q59",
+    testId: "test-7",
+    questionText: "What is the value of 15 × 12?",
+    options: ["160", "170", "180", "190"],
+    correctAnswer: 2,
+    explanation: "15 × 12 = 180.",
+    order: 9
+  },
+
+  {
+    id: "q60",
+    testId: "test-7",
+    questionText: "If a number is increased by 25% and becomes 250, what was the original number?",
+    options: ["180", "190", "200", "220"],
+    correctAnswer: 2,
+    explanation: "Original Number = 250 ÷ 1.25 = 200.",
+    order: 10
+  }
+]
 };
 
-export const TESTIMONIALS = [
-  {
-    name: "Priya Sharma",
-    course: "Computer Science",
-    text: "StudyMaterials helped me organize my entire semester's preparation. The unit-wise materials and mock tests were incredibly useful!",
-    rating: 5,
-  },
-  {
-    name: "Rahul Verma",
-    course: "Engineering",
-    text: "The 3D animations and concept videos made complex physics topics so much easier to understand. Highly recommended!",
-    rating: 5,
-  },
-  {
-    name: "Ananya Gupta",
-    course: "Mathematics",
-    text: "Previous year papers and question banks helped me identify important topics. I scored 95% in my finals!",
-    rating: 4,
-  },
-];
 
-export const DEMO_REVIEWS = {
-  "demo-1": [
-    { id: "r1", userName: "Amit Kumar", rating: 5, text: "Excellent course! The unit-wise structure made DSA concepts very clear.", date: "15 Apr 2026" },
-    { id: "r2", userName: "Sneha Patel", rating: 4, text: "Great explanations. The dynamic programming section was especially helpful.", date: "12 Apr 2026" },
-    { id: "r3", userName: "Vikram Singh", rating: 5, text: "Best DSA course I've taken. Mock tests helped me prepare for placements.", date: "8 Apr 2026" },
-  ],
-  "demo-2": [
-    { id: "r4", userName: "Riya Sharma", rating: 5, text: "Loved the hands-on approach to web development. Very practical!", date: "18 Apr 2026" },
-    { id: "r5", userName: "Arjun Mehta", rating: 4, text: "Good coverage of React. Would love more advanced topics.", date: "10 Apr 2026" },
-  ],
-  "demo-3": [
-    { id: "r6", userName: "Priyanka Joshi", rating: 4, text: "Calculus sections were well explained with plenty of examples.", date: "14 Apr 2026" },
-    { id: "r7", userName: "Karan Gupta", rating: 5, text: "Helped me score 90+ in my university exams!", date: "5 Apr 2026" },
-  ],
-  "demo-4": [
-    { id: "r8", userName: "Deepak Yadav", rating: 5, text: "Boolean algebra and circuit design explained perfectly.", date: "20 Apr 2026" },
-  ],
-  "demo-5": [
-    { id: "r9", userName: "Ananya Reddy", rating: 4, text: "Modern physics section was fascinating. Great video content.", date: "16 Apr 2026" },
-  ],
-  "demo-6": [
-    { id: "r10", userName: "Rohit Agarwal", rating: 5, text: "SQL and normalization concepts became crystal clear. Highly recommend!", date: "19 Apr 2026" },
-  ],
-};
+

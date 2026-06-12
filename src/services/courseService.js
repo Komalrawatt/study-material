@@ -245,43 +245,9 @@ export const getEnrolledCourses = async (courseIds) => {
   return courses;
 };
 
-// Add a review
-export const addReview = async (reviewData) => {
-  const reviewsRef = collection(db, "reviews");
-  await addDoc(reviewsRef, {
-    ...reviewData,
-    createdAt: serverTimestamp(),
-  });
 
-  if (reviewData?.courseId) {
-    const courseRef = doc(db, "courses", reviewData.courseId);
-    const courseSnap = await getDoc(courseRef);
-    if (courseSnap.exists()) {
-      const data = courseSnap.data();
-      const currentAvg = Number(data.averageRating || 0);
-      const currentCount = Number(data.ratingsCount || 0);
-      const ratingValue = Number(reviewData.rating || 0);
-      const nextCount = currentCount + 1;
-      const nextAvg = nextCount > 0
-        ? (currentAvg * currentCount + ratingValue) / nextCount
-        : 0;
 
-      await updateDoc(courseRef, {
-        averageRating: nextAvg,
-        ratingsCount: nextCount,
-        updatedAt: serverTimestamp(),
-      });
-    }
-  }
-};
 
-// Get reviews for a course
-export const getCourseReviews = async (courseId) => {
-  const reviewsRef = collection(db, "reviews");
-  const q = query(reviewsRef, where("courseId", "==", courseId), orderBy("createdAt", "desc"));
-  const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-};
 
 // Search courses
 export const searchCourses = async (searchTerm) => {

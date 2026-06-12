@@ -3,16 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import {
-  User,
-  Mail,
   Briefcase,
   Lock,
   Trash2,
   Save,
-  Shield,
-  BookOpen,
-  ClipboardCheck,
-  TrendingUp,
   Calendar,
   AlertTriangle,
   Eye,
@@ -169,24 +163,7 @@ export default function ProfilePage() {
                 )}
               </div>
             </div>
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-3 mt-6">
-              <div className="text-center p-3 rounded-xl bg-muted/50">
-                <BookOpen className="w-5 h-5 text-blue-400 mx-auto mb-1" />
-                <p className="text-lg font-bold font-['Outfit']">{user?.enrolledCourses?.length || 0}</p>
-                <p className="text-xs text-muted-foreground">Courses</p>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-muted/50">
-                <ClipboardCheck className="w-5 h-5 text-green-400 mx-auto mb-1" />
-                <p className="text-lg font-bold font-['Outfit']">0</p>
-                <p className="text-xs text-muted-foreground">Tests Taken</p>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-muted/50">
-                <TrendingUp className="w-5 h-5 text-purple-400 mx-auto mb-1" />
-                <p className="text-lg font-bold font-['Outfit']">—</p>
-                <p className="text-xs text-muted-foreground">Avg Score</p>
-              </div>
-            </div>
+            
           </CardContent>
         </Card>
 
@@ -194,7 +171,7 @@ export default function ProfilePage() {
         <Card className="border-border/50 bg-card/80">
           <CardHeader>
             <CardTitle className="text-lg font-['Outfit'] flex items-center gap-2">
-              <User className="w-5 h-5 text-indigo-400" />Personal Information
+              Personal Information
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -243,7 +220,7 @@ export default function ProfilePage() {
         <Card className="border-border/50 bg-card/80">
           <CardHeader>
             <CardTitle className="text-lg font-['Outfit'] flex items-center gap-2">
-              <Shield className="w-5 h-5 text-indigo-400" />Security
+             Security
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">

@@ -54,9 +54,7 @@ export default function LoginPage() {
       </div>
       <Card className="w-full max-w-md relative border-border/50 bg-card/80 backdrop-blur-xl shadow-2xl animate-scale-in">
         <CardHeader className="text-center pb-2">
-          <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-            <GraduationCap className="w-7 h-7 text-white" />
-          </div>
+          
           <CardTitle className="text-2xl font-['Outfit']">Welcome Back</CardTitle>
           <CardDescription>Sign in to your StudyMaterials account</CardDescription>
         </CardHeader>

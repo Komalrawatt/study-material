@@ -39,14 +39,14 @@ export default function MockTestPage() {
                 {course && <p className="text-xs text-muted-foreground mb-2">{course.title}</p>}
                 <p className="text-sm text-muted-foreground mb-4">{test.description}</p>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
-                  <span className="flex items-center gap-1"><HelpCircle className="w-3.5 h-3.5" />{test.totalQuestions} questions</span>
-                  <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{formatDuration(test.duration)}</span>
+                  <span className="flex items-center gap-1">{test.totalQuestions} questions</span>
+                  <span className="flex items-center gap-1">{formatDuration(test.duration)}</span>
                 </div>
                 <Button
                   onClick={() => navigate(`/mock-tests/${test.id}`)}
                   className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white gap-2"
                 >
-                  <Zap className="w-4 h-4" />Start Test
+                 Start Test
                 </Button>
               </CardContent>
             </Card>

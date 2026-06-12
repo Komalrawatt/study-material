@@ -18,10 +18,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import CourseCard from "@/components/common/CourseCard";
-import TestimonialCard from "@/components/common/TestimonialCard";
-import StatsCounter from "@/components/common/StatsCounter";
 import BookLibrary from "@/components/common/BookLibrary";
-import { FEATURES, DEMO_COURSES, TESTIMONIALS } from "@/utils/constants";
+import { FEATURES, DEMO_COURSES } from "@/utils/constants";
 
 const featureIcons = {
   FileText, Video, ClipboardCheck, HelpCircle, FlaskConical, Box, ScrollText, Headphones,
@@ -38,11 +36,11 @@ export default function HomePage() {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
         <div className="absolute top-40 right-1/4 w-48 h-48 bg-cyan-500/8 rounded-full blur-2xl animate-float" style={{ animationDelay: "0.8s" }} />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-25">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm mb-8 animate-scale-in">
               {/* <Sparkles className="w-4 h-4" /> */}
-              <span>Your Complete Academic Resource Platform</span>
+              <span>Complete Academic Resource Platform</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-['Outfit'] leading-tight mb-6">
@@ -69,7 +67,7 @@ export default function HomePage() {
               </Link>
               <Link to="/signup">
                 <Button variant="outline" size="lg" className="h-12 px-8 text-base border-border/60 hover:bg-muted">
-                  Get Started Free
+                  Get Started
                 </Button>
               </Link>
             </div>
@@ -77,20 +75,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="relative border-y border-border/40 bg-card/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border/40">
-            <StatsCounter end={500} label="Study Materials" icon={FileText} suffix="+" />
-            <StatsCounter end={50} label="Courses" icon={BookOpen} suffix="+" />
-            <StatsCounter end={10000} label="Active Students" icon={Users} suffix="+" />
-            <StatsCounter end={200} label="Mock Tests" icon={ClipboardCheck} suffix="+" />
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-10 md:py-15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs mb-4">
@@ -133,7 +119,7 @@ export default function HomePage() {
       </section>
 
       {/* Popular Courses */}
-      <section className="py-20 bg-card/30 border-y border-border/40">
+      <section className="py-10 bg-card/30 border-y border-border/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <div>
@@ -167,15 +153,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Book Library */}
-      <section className="py-20 md:py-24">
+      {/* Search Books */}
+      <section className="py-20 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BookLibrary showLibraryTab={false} />
         </div>
       </section>
 
       {/* Why StudyMaterials */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -233,28 +219,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-card/30 border-y border-border/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Outfit'] mb-4">
-              What Students <span className="gradient-text">Say</span>
-            </h2>
-            <p className="text-muted-foreground">
-              Hear from students who transformed their study experience with StudyMaterials
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
-            {TESTIMONIALS.map((testimonial, i) => (
-              <TestimonialCard key={i} testimonial={testimonial} />
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-2xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600" />

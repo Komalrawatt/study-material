@@ -19,7 +19,7 @@ const ITEM_FIELDS = [
   { key: "videos", label: "Videos" },
   { key: "questionBanks", label: "Question Banks" },
   { key: "labManuals", label: "Lab Manuals" },
-  { key: "audioLectures", label: "Audio Lectures" },
+  { key: "previousPapers", label: "Previous Papers" },
 ];
 
 const createEmptyUnit = (unitNumber = 1) => ({
@@ -32,6 +32,7 @@ const createEmptyUnit = (unitNumber = 1) => ({
     videos: [],
     questionBanks: [],
     labManuals: [],
+    previousPapers: [],
     audioLectures: [],
   },
 });

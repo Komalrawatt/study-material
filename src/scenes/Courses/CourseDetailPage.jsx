@@ -26,16 +26,15 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Input } from "@/components/ui/input";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { DEMO_COURSES, MATERIAL_TYPES, DEMO_REVIEWS } from "@/utils/constants";
+
+import { DEMO_COURSES, MATERIAL_TYPES } from "@/utils/constants";
 import { getInitials } from "@/utils/helpers";
 import { toast } from "sonner";
 import { fetchDefaultMaterials } from "@/services/externalApiService";
-import { addReview } from "@/services/courseService";
+
 import {
   fetchCourseDetail,
   clearCurrentCourse,
@@ -97,14 +96,10 @@ export default function CourseDetailPage() {
   const { currentCourse, materials: firestoreMaterials, reviews: firestoreReviews, loading } = useSelector((state) => state.courses);
   const [openUnits, setOpenUnits] = useState([1]);
   const [enrolled, setEnrolled] = useState(false);
-  const [reviewRating, setReviewRating] = useState(0);
-  const [hoverRating, setHoverRating] = useState(0);
-  const [localReviews, setLocalReviews] = useState(DEMO_REVIEWS[id] || []);
-  const [submittingReview, setSubmittingReview] = useState(false);
+
   const [refBooks, setRefBooks] = useState([]);
   const [loadingBooks, setLoadingBooks] = useState(false);
 
-  const reviewForm = useForm({ defaultValues: { reviewText: "" } });
 
   // Find course in demo or from store
   const demoCourse = DEMO_COURSES.find((c) => c.id === id);
@@ -256,50 +251,6 @@ export default function CourseDetailPage() {
       });
   };
 
-  const handleSubmitReview = (data) => {
-    if (!isAuthenticated) {
-      toast.error("Please login to submit a review");
-      return;
-    }
-    if (reviewRating === 0) {
-      toast.error("Please select a star rating");
-      return;
-    }
-    setSubmittingReview(true);
-    const newReview = {
-      id: `review-${Date.now()}`,
-      userId: user?.uid,
-      userName: user?.displayName || "Anonymous",
-      courseId: course?.id,
-      rating: reviewRating,
-      text: data.reviewText,
-      date: new Date().toLocaleDateString("en-IN", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-      }),
-    };
-
-    addReview({
-      userId: newReview.userId,
-      userName: newReview.userName,
-      courseId: newReview.courseId,
-      rating: newReview.rating,
-      text: newReview.text,
-    })
-      .then(() => {
-        setLocalReviews((prev) => [newReview, ...prev]);
-        reviewForm.reset();
-        setReviewRating(0);
-        toast.success("Review submitted successfully!");
-      })
-      .catch((error) => {
-        toast.error(error?.message || "Failed to submit review");
-      })
-      .finally(() => {
-        setSubmittingReview(false);
-      });
-  };
 
   const handleMaterialClick = (materialLabel) => {
     if (!isEnrolled) {
@@ -308,11 +259,7 @@ export default function CourseDetailPage() {
     }
   };
 
-  const allReviews = [...localReviews, ...firestoreReviews];
-  const avgRating =
-    allReviews.length > 0
-      ? (allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length).toFixed(1)
-      : "";
+  
   const creatorLabel =
     course.creatorName || course.createdByName || course.createdBy || course.educatorId || "";
 
@@ -366,12 +313,7 @@ export default function CourseDetailPage() {
                   <BookOpen className="w-4 h-4" />
                   {course.units?.length || 0} units
                 </span>
-                {allReviews.length > 0 && (
-                  <span className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400" />
-                    {avgRating} ({allReviews.length} reviews)
-                  </span>
-                )}
+               
               </div>
             </CardContent>
           </Card>
@@ -517,130 +459,15 @@ export default function CourseDetailPage() {
             </div>
           </div>
 
-          {/* Reviews & Feedback Section */}
-          <div>
-            <h2 className="text-xl font-bold font-['Outfit'] mb-4 flex items-center gap-2">
-              <Star className="w-5 h-5 text-yellow-400" />
-              Reviews & Feedback
-            </h2>
-
-            {/* Submit Review */}
-            <Card className="border-border/50 bg-card/80 mb-4">
-              <CardContent className="p-5">
-                <h3 className="font-semibold text-sm mb-3">Write a Review</h3>
-                <div className="flex items-center gap-1 mb-3">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <button
-                      key={star}
-                      onClick={() => setReviewRating(star)}
-                      onMouseEnter={() => setHoverRating(star)}
-                      onMouseLeave={() => setHoverRating(0)}
-                      className="transition-transform hover:scale-110"
-                    >
-                      <Star
-                        className={`w-6 h-6 transition-colors ${
-                          star <= (hoverRating || reviewRating)
-                            ? "text-yellow-400 fill-yellow-400"
-                            : "text-muted-foreground/30"
-                        }`}
-                      />
-                    </button>
-                  ))}
-                  {reviewRating > 0 && (
-                    <span className="text-xs text-muted-foreground ml-2">
-                      {reviewRating}/5
-                    </span>
-                  )}
-                </div>
-                <form onSubmit={reviewForm.handleSubmit(handleSubmitReview)} className="flex gap-2">
-                  <div className="flex-1">
-                    <Input
-                      placeholder="Share your experience with this course..."
-                      className="h-10 bg-muted/50"
-                      {...reviewForm.register("reviewText", { required: "Please write a review" })}
-                    />
-                    {reviewForm.formState.errors.reviewText && (
-                      <p className="text-xs text-red-400 mt-1">{reviewForm.formState.errors.reviewText.message}</p>
-                    )}
-                  </div>
-                  <Button
-                    type="submit"
-                    disabled={submittingReview}
-                    className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white gap-2 shrink-0"
-                  >
-                    <Send className="w-4 h-4" />
-                    {submittingReview ? "Sending..." : "Submit"}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Existing Reviews */}
-            {allReviews.length > 0 ? (
-              <div className="space-y-3">
-                {allReviews.map((review) => (
-                  <Card
-                    key={review.id}
-                    className="border-border/50 bg-card/60"
-                  >
-                    <CardContent className="p-4">
-                      <div className="flex items-start gap-3">
-                        <Avatar className="h-9 w-9 shrink-0">
-                          <AvatarFallback className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white text-xs">
-                            {getInitials(review.userName)}
-                          </AvatarFallback>
-                        </Avatar>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-sm font-medium">
-                              {review.userName}
-                            </span>
-                            <span className="text-xs text-muted-foreground">
-                              {review.date || (review.createdAt?.seconds ? new Date(review.createdAt.seconds * 1000).toLocaleDateString() : "")}
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-0.5 mb-2">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className={`w-3.5 h-3.5 ${
-                                  star <= review.rating
-                                    ? "text-yellow-400 fill-yellow-400"
-                                    : "text-muted-foreground/30"
-                                }`}
-                              />
-                            ))}
-                          </div>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {review.text}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            ) : (
-              <Card className="border-border/50 border-dashed bg-card/40">
-                <CardContent className="py-8 text-center">
-                  <Star className="w-8 h-8 text-muted-foreground/30 mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">
-                    No reviews yet. Be the first to review this course!
-                  </p>
-                </CardContent>
-              </Card>
-            )}
-          </div>
+        
 
           {/* Reference Materials from Google Books */}
           <div>
             <h2 className="text-xl font-bold font-['Outfit'] mb-4 flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-emerald-400" />
-              Reference Materials
+              Reference Books
             </h2>
-            <p className="text-sm text-muted-foreground mb-4">
-              Recommended textbooks and resources from Google Books
-            </p>
+           
             {loadingBooks ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[1, 2, 3, 4].map((i) => (
@@ -690,9 +517,7 @@ export default function CourseDetailPage() {
                               </Badge>
                             </a>
                           )}
-                          <Badge variant="secondary" className="text-xs">
-                            {book.source}
-                          </Badge>
+                         
                         </div>
                       </div>
                     </CardContent>

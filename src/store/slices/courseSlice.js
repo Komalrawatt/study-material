@@ -6,7 +6,7 @@ import {
   unenrollFromCourse,
   getEnrolledCourses,
   searchCourses,
-  getCourseReviews,
+  
 } from "@/services/courseService";
 
 export const fetchCourses = createAsyncThunk(
@@ -100,7 +100,6 @@ const courseSlice = createSlice({
     enrolledCourses: [],
     currentCourse: null,
     materials: [],
-    reviews: [],
     searchResults: [],
     loading: false,
     error: null,
@@ -109,7 +108,7 @@ const courseSlice = createSlice({
     clearCurrentCourse: (state) => {
       state.currentCourse = null;
       state.materials = [];
-      state.reviews = [];
+    
     },
     clearSearchResults: (state) => {
       state.searchResults = [];
@@ -137,7 +136,7 @@ const courseSlice = createSlice({
         state.loading = false;
         state.currentCourse = action.payload.course;
         state.materials = action.payload.materials;
-        state.reviews = action.payload.reviews;
+        
       })
       .addCase(fetchCourseDetail.rejected, (state, action) => {
         state.loading = false;

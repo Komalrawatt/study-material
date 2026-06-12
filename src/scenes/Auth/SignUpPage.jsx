@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { Mail, Lock, Eye, EyeOff, User, GraduationCap, ArrowRight, BookOpen, Users as UsersIcon } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, User, ArrowRight} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { registerUser, googleLogin, clearError } from "@/store/slices/authSlice";
 import { toast } from "sonner";
@@ -58,11 +58,8 @@ export default function SignUpPage() {
       </div>
       <Card className="w-full max-w-md relative border-border/50 bg-card/80 backdrop-blur-xl shadow-2xl animate-scale-in">
         <CardHeader className="text-center pb-2">
-          <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-            <GraduationCap className="w-7 h-7 text-white" />
-          </div>
+          
           <CardTitle className="text-2xl font-['Outfit']">Create Account</CardTitle>
-          <CardDescription>Join StudyMaterials and start learning</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {/* Role Selector */}
@@ -76,7 +73,6 @@ export default function SignUpPage() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <BookOpen className="w-4 h-4" />
               Student
             </button>
             <button
@@ -88,7 +84,6 @@ export default function SignUpPage() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <UsersIcon className="w-4 h-4" />
               Educator
             </button>
           </div>

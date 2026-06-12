@@ -21,7 +21,7 @@ export default function BookLibrary({
   initialTab = "search",
   showSearchTab = true,
   showLibraryTab = true,
-  title = "📚 Book Library",
+  title = "📚 Search Books",
   compactLibrary = false,
 }) {
   const dispatch = useDispatch();
@@ -130,7 +130,7 @@ export default function BookLibrary({
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-3 text-gray-400" size={20} />
               <Input
-                placeholder="Search books, authors, or topics..."
+                placeholder="Search Online TextBooks, NCERT Books, AudioBooks, Novels..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
